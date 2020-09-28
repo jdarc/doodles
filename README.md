@@ -13,6 +13,14 @@ Launch the application with...
 
 ![](./media/corridor.png)
 
+- Total steps: controls the number of steps the path generator performs, keep below 500 for interactive frame rates.
+- Step size: controls the size of each step.
+- Step size variance: controls the randomness of the step size.
+- Max angle: sets the max angle when choosing where to go next.
+- New Route: generates a new random route.
+- Adaptive scaling: zoom the viewport in or out to keep the entire route and corridor visible.
+- Radius slider: controls the size of the corridor.
+
 ## Constructive Area Geometry Playground
 
 ![](./media/cag.png)
