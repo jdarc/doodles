@@ -5,6 +5,7 @@ import java.awt.event.KeyEvent
 import java.awt.event.WindowEvent
 import java.awt.image.BufferedImage
 import javax.swing.*
+import javax.swing.border.EmptyBorder
 
 class MainFrame : JFrame("Constructive Area Geometry") {
 
@@ -28,6 +29,7 @@ class MainFrame : JFrame("Constructive Area Geometry") {
         val insets = Insets(4, 4, 4, 8)
 
         val toolbar = JPanel()
+        toolbar.border = EmptyBorder(2, 2, 2, 2)
         toolbar.layout = BoxLayout(toolbar, BoxLayout.X_AXIS)
 
         val editButton = createToggleButton("Manipulate", Icons.edit(interactionsColor), KeyEvent.VK_E, insets)
@@ -82,15 +84,21 @@ class MainFrame : JFrame("Constructive Area Geometry") {
         buttonGroup.add(pentagonButton)
         buttonGroup.add(circleButton)
         buttonGroup.add(capsuleButton)
+        editButton.isSelected = true
 
-        toolbar.add(Box.createRigidArea(Dimension(8, 0)))
+        toolbar.add(Box.createRigidArea(Dimension(2, 0)))
         toolbar.add(editButton)
         toolbar.add(Box.createHorizontalGlue())
         toolbar.add(triangleButton)
+        toolbar.add(Box.createRigidArea(Dimension(2, 0)))
         toolbar.add(squareButton)
+        toolbar.add(Box.createRigidArea(Dimension(2, 0)))
         toolbar.add(rectangleButton)
+        toolbar.add(Box.createRigidArea(Dimension(2, 0)))
         toolbar.add(pentagonButton)
+        toolbar.add(Box.createRigidArea(Dimension(2, 0)))
         toolbar.add(circleButton)
+        toolbar.add(Box.createRigidArea(Dimension(2, 0)))
         toolbar.add(capsuleButton)
         toolbar.add(Box.createHorizontalGlue())
         toolbar.add(unionButton)
@@ -98,7 +106,7 @@ class MainFrame : JFrame("Constructive Area Geometry") {
         toolbar.add(intersectButton)
         toolbar.add(Box.createHorizontalGlue())
         toolbar.add(deleteButton)
-        toolbar.add(Box.createRigidArea(Dimension(8, 0)))
+        toolbar.add(Box.createRigidArea(Dimension(2, 0)))
         return toolbar
     }
 
