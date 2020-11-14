@@ -15,7 +15,7 @@ class MainFrame : JFrame("Constructive Area Geometry") {
         defaultCloseOperation = EXIT_ON_CLOSE
 
         add(buildToolbar(), BorderLayout.PAGE_START)
-        add(editorPanel, BorderLayout.CENTER)
+        contentPane.add(editorPanel, BorderLayout.CENTER)
         pack()
         setLocationRelativeTo(null)
         bindEvents()
