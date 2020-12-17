@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.21'
 }
 
 group 'com.zynaps.demos.cag'
@@ -10,10 +10,4 @@ mainClassName = 'demo.Bootstrap'
 
 repositories {
     mavenCentral()
-}
-
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib"
-    testCompile 'org.junit.jupiter:junit-jupiter-api:5.6.22'
-    testCompile 'org.assertj:assertj-core:3.17.02'
 }

@@ -90,7 +90,7 @@ object Icons {
         return withShape(shape, Color.RED)
     }
 
-    fun withBase64(encoded: String, color: Color = Color.BLACK): BufferedImage {
+    private fun withBase64(encoded: String, color: Color = Color.BLACK): BufferedImage {
         val decoded = Base64.getDecoder().decode(encoded)
         ByteArrayInputStream(decoded).use { return blend(ImageIO.read(it), color.rgb) }
     }
